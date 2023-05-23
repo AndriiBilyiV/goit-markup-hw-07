@@ -63,9 +63,22 @@ body {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  min-width: 320px;
+  max-width: 396px;
   margin: 0 auto;
+}
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+/* Desktop screen */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 ul,
 p,
@@ -180,21 +193,35 @@ img {
   margin-right: auto;
   background-size: cover;
   background-color: var(--hero-bg-color);
-  padding: 188px 0;
+  padding: 112px 0;
+}
+@media only screen and (min-width: 1200px) {
+  .hero-section {
+    padding: 188px 0;
+  }
 }
 
 .hero-title {
   display: block;
   margin: 0 auto;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   color: var(--hero-title-color);
   text-align: center;
   letter-spacing: 0.02em;
-  max-width: 496px;
-  margin-bottom: 48px;
+  max-width: 320px;
+  margin-bottom: 72px;
 }
+@media only screen and (min-width: 1200px) {
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    margin-bottom: 48px;
+    line-height: 1.07;
+  }
+}
+
 .order-btn,
 .send-btn {
   display: block;
@@ -224,18 +251,29 @@ img {
 }
 /* Our advantages */
 .advantages-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 .advantages-icon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 264px;
-  height: 112px;
-  background: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
 }
 .advantages-icon {
   display: block;
@@ -243,30 +281,63 @@ img {
 }
 .advantages-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
 }
 .advantages-item {
-  width: 264px;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-item {
+    width: 264px;
+  }
 }
 
 .advantages-titles {
-  font-size: 20px;
-  font-weight: 500;
   color: var(--title-dark-color);
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-titles {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+  }
 }
 .adventages-descr {
   font-size: 16px;
   color: var(--main-text-dark-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1200px) {
+  .adventages-descr {
+    font-weight: 400;
+  }
 }
 /* What are we doing */
 .card-photo-section {
-  padding-bottom: 120px;
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .card-photo-section {
+    display: block;
+    padding-bottom: 120px;
+  }
 }
 .card-photo-list {
   display: flex;
@@ -279,14 +350,27 @@ img {
 /* Our Team */
 .team-section {
   background-color: var(--light-bg-color);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
-
+@media only screen and (min-width: 1200px) {
+  .team-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 .team-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
+}
+@media only screen and (min-width: 1200px) {
+  .team-list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
 }
 .person-div {
   background-color: #fff;
@@ -346,8 +430,16 @@ img {
 }
 .customers-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+
+  row-gap: 72px;
+  column-gap: 16px;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 1200px) {
+  .customers-list {
+    gap: 24px;
+    /* justify-content: space-between; */
+  }
 }
 .customer-card {
   width: 168px;
