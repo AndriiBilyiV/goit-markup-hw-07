@@ -673,13 +673,24 @@ img {
 
 /* Portfolio */
 .position-section {
-  padding: 96px 0 120px;
+  padding: 48px 0;
+}
+@media only screen and (min-width: 768px) {
+  .position-section {
+    padding: 96px 0 120px;
+  }
 }
 .btn-list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 24px;
   margin-bottom: 72px;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .btn-list {
+    justify-content: center;
+  }
 }
 
 .filter-btn {
@@ -691,13 +702,18 @@ img {
   letter-spacing: 0.04em;
   text-align: center;
   font-weight: 500;
-  padding: 12px 24px;
+  padding: 8px 16px;
   font-size: 16px;
   line-height: 1.5;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 768px) {
+  .filter-btn {
+    padding: 12px 24px;
+  }
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -715,6 +731,7 @@ img {
   flex-basis: calc((100%-2) / 2);
   row-gap: 48px;
   column-gap: 24px;
+  justify-content: center;
 }
 .thumb {
   position: relative;
@@ -810,7 +827,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 408px;
+  width: calc(100vw - 32px);
   min-height: 576px;
   background: var(--modal-bg);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -820,6 +837,11 @@ img {
   transform-origin: top center;
   padding: 24px;
   padding-top: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    min-width: 408px;
+  }
 }
 .modal-close,
 .menu-close {
@@ -1034,11 +1056,12 @@ img {
   padding: 0;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 8vw;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--btn-color);
+  white-space: nowrap;
 }
 .email {
   position: absolute;
@@ -1057,5 +1080,5 @@ img {
   bottom: 40px;
   left: 50%;
   transform: translate(-50%) scale(1);
-  gap: 56px;
+  gap: calc((100vw - ((40px * 4) + (60px * 2))) / 3);
 }
