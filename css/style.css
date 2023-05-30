@@ -123,6 +123,10 @@ h3 {
 @media only screen and (min-width: 1158px) {
   .header-container {
     position: static;
+    transform: translateX(0%) scale(1);
+    max-width: 1158px;
+    width: 100%;
+    padding: 0 15px;
   }
 }
 .logo {
