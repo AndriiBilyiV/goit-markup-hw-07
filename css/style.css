@@ -45,6 +45,16 @@ body {
   color: var(--main-text-dark-color);
   background-color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  body {
+    padding-top: 70px;
+  }
+}
 img {
   display: block;
   min-width: 100%;
@@ -69,14 +79,14 @@ img {
 
 .container {
   min-width: 320px;
-  max-width: 396px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 
@@ -105,7 +115,6 @@ h3 {
   display: flex;
   align-items: center;
   height: 70px;
-  z-index: 1000;
 }
 @media only screen and (min-width: 768px) {
   .header-container {
@@ -242,7 +251,18 @@ h3 {
 }
 @media only screen and (min-width: 768px) {
   .address-item {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
     padding: 6px 0;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address-item {
+    font-size: 16px;
+    line-height: 1.5px;
+    letter-spacing: 0.02em;
   }
 }
 .address-item:hover,
@@ -523,7 +543,7 @@ h3 {
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 64px 24px;
     justify-content: center;
   }
 }
@@ -601,7 +621,7 @@ h3 {
 }
 @media only screen and (min-width: 768px) {
   .customers-list {
-    gap: 24px;
+    gap: 72px 24px;
   }
 }
 .customer-card {
@@ -1010,6 +1030,7 @@ h3 {
   transform-origin: top center;
   padding: 24px;
   padding-top: 72px;
+  z-index: 1000;
 }
 @media only screen and (min-width: 768px) {
   .modal {
@@ -1192,7 +1213,7 @@ h3 {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  z-index: 999;
+  z-index: 1000;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -1209,6 +1230,7 @@ h3 {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 284px;
 }
 .mobile-menu .nav-link {
   padding: 0;
@@ -1228,12 +1250,11 @@ h3 {
   color: var(--hover-color);
 }
 .menu-container .address-list {
-  flex-direction: column;
+  display: block;
+  padding-left: 40px;
 }
 .tel {
-  position: absolute;
-  bottom: 192px;
-  left: 40px;
+  display: block;
   padding: 0;
   font-style: normal;
   font-weight: 700;
@@ -1243,11 +1264,11 @@ h3 {
   text-transform: capitalize;
   color: var(--btn-color);
   white-space: nowrap;
+  margin-bottom: 40px;
+  text-align: left;
 }
 .email {
-  position: absolute;
-  bottom: 128px;
-  left: 40px;
+  display: block;
   padding: 0;
   font-style: normal;
   font-weight: 500;
@@ -1255,11 +1276,9 @@ h3 {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--address-color);
+  margin-bottom: 48px;
+  text-align: left;
 }
 .menu-social {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translate(-50%) scale(1);
   gap: calc((100vw - ((40px * 4) + (60px * 2))) / 3);
 }
